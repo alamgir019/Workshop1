@@ -110,7 +110,6 @@
             message.Content = data;
             console.log('alamgir' + usersList + usersList.value);
             message.Receiver = usersList.value;
-            message.IsPrivate = true;
             console.log(JSON.stringify(message));
 
             socket.send(JSON.stringify(message));

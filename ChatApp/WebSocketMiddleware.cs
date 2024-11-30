@@ -80,7 +80,7 @@ namespace ChatApp
 
                 if (clientMessage.IsValid(expectedUsername))
                 {
-                    if(clientMessage.IsPrivate??false && clientMessage.Receiver != null)
+                    if(clientMessage.IsPrivate)
                     {
                         await _webSocketHandler.SendPrivateMessage(socket, clientMessage.Receiver, JsonSerializer.Serialize(chatMessage));
                     }
