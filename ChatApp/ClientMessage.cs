@@ -11,7 +11,11 @@ namespace ChatApp
         public string Sender { get; set; }
         public string Receiver { get; set; }
         public string Content { get; set; }
-        public bool? IsPrivate { get; set; }
+        public bool IsPrivate {
+            get {
+                return !string.IsNullOrEmpty(Receiver);
+            }
+        }
 
         public bool IsValid(string expectedUsername)
         {

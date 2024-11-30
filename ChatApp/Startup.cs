@@ -35,11 +35,6 @@ namespace ChatApp
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
-
-                endpoints.MapGet("/cache-control", async context =>
-                {
-                    await context.Response.WriteAsync("Hello Caching!");
-                });
             });
 
             var webSocketOptions = new WebSocketOptions()
