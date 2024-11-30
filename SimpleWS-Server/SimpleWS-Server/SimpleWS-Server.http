@@ -1,0 +1,6 @@
+@SimpleWS_Server_HostAddress = http://localhost:5064
+
+GET {{SimpleWS_Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
